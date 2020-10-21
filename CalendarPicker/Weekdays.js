@@ -27,7 +27,11 @@ export default function Weekdays(props) {
   return (
     <View style={[styles.dayLabelsWrapper, dayLabelsWrapper]}>
       {wd.map((day, key) => {
-        const dayOfWeekTextStyle = [styles.dayLabels, textStyle];
+        const dayOfWeekTextStyle = [
+          styles.dayLabels,
+          textStyle,
+          { color: "rgba(0,0,0,0.58)" },
+        ];
         let customDayOfWeekStyles = {};
         if (customDayHeaderStyles instanceof Function) {
           const dayOfWeek = dayOfWeekNums[key];
