@@ -58,7 +58,7 @@ export default function YearsHeader(props) {
 }
 
 YearsHeader.propTypes = {
-  styles: PropTypes.shape(),
+  styles: PropTypes.shape({}),
   textStyle: Text.propTypes.style,
   title: PropTypes.string,
   onYearViewNext: PropTypes.func,

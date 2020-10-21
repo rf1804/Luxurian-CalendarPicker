@@ -18,7 +18,7 @@ export default function MonthsHeader(props) {
 }
 
 MonthsHeader.propTypes = {
-  styles: PropTypes.shape(),
+  styles: PropTypes.shape({}),
   textStyle: Text.propTypes.style,
   title: PropTypes.string,
 };

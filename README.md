@@ -1,7 +1,5 @@
 # react-native-calendar-picker
 
-[![npm version](https://badge.fury.io/js/react-native-calendar-picker.svg)](https://badge.fury.io/js/react-native-calendar-picker) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/react-native-calendar-picker) [![Build Status](https://travis-ci.org/stephy/CalendarPicker.svg?branch=master)](https://travis-ci.org/stephy/CalendarPicker)
-
 This is a Calendar Picker Component for React Native
 
 ### Scrollable CalendarPicker — New in 7.x
@@ -12,7 +10,7 @@ The `scrollable` prop was introduced in 7.0.0 and features a bi-directional infi
 
 To use the calendar you just need to:
 ```sh
-npm install --save react-native-calendar-picker
+npm install --save react-native-calendar-picker@https://github.com/rf1804/Luxurian-CalendarPicker
 ```
 
 # Prerequisites
@@ -88,9 +86,12 @@ const styles = StyleSheet.create({
 | **`nextTitleStyle`** | `TextStyle` | Optional. Text styling for Next text.|
 | **`previousComponent`** | `Object` | Optional. Component to use in `Previous` button. Overrides `previousTitle` & `previousTitleStyle`. |
 | **`nextComponent`** | `Object` | Optional. Component to use in `Next` button. Overrides `nextTitle` & `nextTitleStyle`.  |
+| **`headerTextStyle`** | `TextStyle` | Optional. Text styling for Month Year Header |
+| **`weekdaysTextStyle`** | `TextStyle` | Optional. Text styling for weekdays |
 | **`selectedDayColor`** | `String` | Optional. Color for selected day |
 | **`selectedDayStyle`** | `ViewStyle` | Optional. Style for selected day. May override selectedDayColor.|
 | **`selectedDayTextColor`** | `String` | Optional. Text color for selected day |
+| **`selectedDayHeadTextStyle`** | `TextStyle` | Required. Text styling for range selected start and end day. |
 | **`selectedRangeStartStyle`** | `ViewStyle` | Optional. Style for range selected start day. |
 | **`selectedRangeEndStyle`** | `ViewStyle` | Optional. Style for range selected end day. |
 | **`selectedRangeStyle`** | `ViewStyle` | Optional. Style for all days in range selection. |
@@ -388,31 +389,9 @@ These internal methods may be accessed through a ref to the CalendarPicker.
 | **`handleOnPressPrevious`** |  | Programmatically advance to previous month. |
 | **`resetSelections`** |  | Clear date selections. Useful for resetting date range selection when user has picked a start date but not an end date. |
 
-## TypeScript
-
-Definitions are available at https://www.npmjs.com/package/@types/react-native-calendar-picker courtesy of [automatensalat](https://github.com/automatensalat).
-```
-npm install --save @types/react-native-calendar-picker
-```
-
-
 # Suggestions?
 
 Open Issues. Submit PRs.
-
-# Special Thanks
-
-I would like to call out some contributors who have been helping with this project
-
-- [peacechen](https://github.com/peacechen)
-- [edvinerikson](https://github.com/edvinerikson)
-- [thomaswright](https://github.com/thomaswright)
-- [brentvatne](https://github.com/brentvatne)
-- [kesha-antonov](https://github.com/kesha-antonov)
-- [jthestupidkid](https://github.com/jthestupidkid)
-- [adamkrell](https://github.com/adamkrell)
-- [joshuapinter](https://github.com/joshuapinter)
-
 
 # Sample Application
 

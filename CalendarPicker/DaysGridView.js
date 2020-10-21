@@ -6,10 +6,6 @@ import EmptyDay from "./EmptyDay";
 import { Utils } from "./Utils";
 import moment from "moment";
 
-const ViewPropTypes = PropTypes.shape({
-  style: PropTypes.any,
-});
-
 export default class DaysGridView extends Component {
   constructor(props) {
     super(props);
@@ -239,15 +235,15 @@ export default class DaysGridView extends Component {
 }
 
 DaysGridView.propTypes = {
-  styles: PropTypes.shape(),
+  styles: PropTypes.shape({}),
   month: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   onPressDay: PropTypes.func,
   startFromMonday: PropTypes.bool,
-  selectedDayStyle: ViewPropTypes.style,
-  selectedRangeStartStyle: ViewPropTypes.style,
-  selectedRangeStyle: ViewPropTypes.style,
-  selectedRangeEndStyle: ViewPropTypes.style,
+  selectedDayStyle: PropTypes.shape({}),
+  selectedRangeStartStyle: PropTypes.shape({}),
+  selectedRangeStyle: PropTypes.shape({}),
+  selectedRangeEndStyle: PropTypes.shape({}),
   todayTextStyle: Text.propTypes.style,
   customDatesStyles: PropTypes.oneOfType([
     PropTypes.func,
@@ -258,8 +254,8 @@ DaysGridView.propTypes = {
           PropTypes.instanceOf(Date),
           PropTypes.instanceOf(moment),
         ]),
-        containerStyle: ViewPropTypes.style,
-        style: ViewPropTypes.style,
+        containerStyle: PropTypes.shape({}),
+        style: PropTypes.shape({}),
         textStyle: Text.propTypes.style,
       })
     ),
