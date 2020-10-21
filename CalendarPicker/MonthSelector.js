@@ -1,9 +1,9 @@
 // Parent view for Month selector
 
-import React, { Component } from 'react';
-import { View } from 'react-native';
-import MonthsGridView from './MonthsGridView';
-import MonthsHeader from './MonthsHeader';
+import React, { Component } from "react";
+import { View } from "react-native";
+import MonthsGridView from "./MonthsGridView";
+import MonthsHeader from "./MonthsHeader";
 
 export default class MonthSelector extends Component {
   constructor(props) {
