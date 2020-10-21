@@ -13,6 +13,7 @@ export default function Weekdays(props) {
     textStyle,
     dayLabelsWrapper,
     customDayHeaderStyles,
+    weekdaysTextStyle
   } = props;
 
   // dayOfWeekNums: ISO week day numbers
@@ -30,7 +31,7 @@ export default function Weekdays(props) {
         const dayOfWeekTextStyle = [
           styles.dayLabels,
           textStyle,
-          { color: "rgba(0,0,0,0.58)" },
+          weekdaysTextStyle,
         ];
         let customDayOfWeekStyles = {};
         if (customDayHeaderStyles instanceof Function) {

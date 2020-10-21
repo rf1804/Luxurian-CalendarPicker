@@ -29,8 +29,8 @@ export default function Day(props) {
     minRangeDuration,
     maxRangeDuration,
     enableDateChange,
+    selectedDayHeadTextStyle
   } = props;
-
   const thisDay = moment({ year, month, day, hour: 12 });
   const today = moment();
 
@@ -176,7 +176,7 @@ export default function Day(props) {
             selectedRangeStyle,
             selectedRangeStartStyle,
           ];
-          selectedDayColorStyle = styles.selectedDayLabel;
+          selectedDayColorStyle = selectedDayHeadTextStyle
         }
         // Apply style for end date
         if (isThisDaySameAsSelectedEnd) {
@@ -185,7 +185,7 @@ export default function Day(props) {
             selectedRangeStyle,
             selectedRangeEndStyle,
           ];
-          selectedDayColorStyle = styles.selectedDayLabel;
+          selectedDayColorStyle = selectedDayHeadTextStyle
         }
         // Apply style if start date is the same as end date
         if (
@@ -198,7 +198,7 @@ export default function Day(props) {
             styles.selectedDayBackground,
             selectedRangeStyle,
           ];
-          selectedDayColorStyle = styles.selectedDayLabel;
+          selectedDayColorStyle = selectedDayHeadTextStyle;
         }
         // Apply style if this day is in range
         if (thisDay.isBetween(selectedStartDate, selectedEndDate, "day")) {
@@ -217,7 +217,7 @@ export default function Day(props) {
           selectedRangeStyle,
           selectedRangeStartStyle,
         ];
-        selectedDayColorStyle = styles.selectedDayLabel;
+        selectedDayColorStyle = selectedDayHeadTextStyle;
       }
     }
 
@@ -236,6 +236,7 @@ export default function Day(props) {
                 disabledDatesTextStyle,
                 styles.selectedDisabledText,
                 selectedDisabledDatesTextStyle,
+                selectedDayColorStyle
               ]}
             >
               {day}

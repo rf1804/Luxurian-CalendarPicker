@@ -408,6 +408,7 @@ export default class CalendarPicker extends Component {
       selectedRangeStyle: this.props.selectedRangeStyle,
       selectedRangeEndStyle: this.props.selectedRangeEndStyle,
       customDatesStyles: this.props.customDatesStyles,
+      selectedDayHeadTextStyle: this.props.selectedDayHeadTextStyle
     };
   };
 
@@ -500,15 +501,16 @@ export default class CalendarPicker extends Component {
       onMonthChange,
       scrollable,
       horizontal,
+      weekdaysTextStyle,
+      headerTextStyle
     } = this.props;
-
     let content;
     switch (currentView) {
       case "months":
         content = (
           <MonthSelector
             styles={styles}
-            textStyle={textStyle}
+            textStyle={[textStyle, weekdaysTextStyle]}
             title={selectMonthTitle}
             currentYear={currentYear}
             months={months}
@@ -523,7 +525,7 @@ export default class CalendarPicker extends Component {
         content = (
           <YearSelector
             styles={styles}
-            textStyle={textStyle}
+            textStyle={[textStyle, weekdaysTextStyle]}
             title={selectYearTitle}
             initialDate={moment(initialDate)}
             currentMonth={currentMonth}
@@ -562,6 +564,7 @@ export default class CalendarPicker extends Component {
               previousTitleStyle={previousTitleStyle}
               nextTitleStyle={nextTitleStyle}
               textStyle={textStyle}
+              headerTextStyle={headerTextStyle}
               restrictMonthNavigation={restrictMonthNavigation}
               minDate={minDate}
               maxDate={maxDate}
@@ -575,6 +578,7 @@ export default class CalendarPicker extends Component {
               currentYear={currentYear}
               weekdays={weekdays}
               textStyle={textStyle}
+              weekdaysTextStyle={weekdaysTextStyle}
               dayLabelsWrapper={dayLabelsWrapper}
               customDayHeaderStyles={customDayHeaderStyles}
             />

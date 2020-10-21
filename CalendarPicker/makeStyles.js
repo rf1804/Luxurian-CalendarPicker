@@ -83,7 +83,7 @@ export function makeStyles(params) {
 
     dayLabels: {
       width: 50 * scaler,
-      fontSize: 12 * scaler,
+      fontSize: 14 * scaler,
       color: "#000",
       textAlign: "center",
     },
@@ -119,7 +119,7 @@ export function makeStyles(params) {
 
     startDayWrapper: {
       width: 50 * scaler,
-      height: 30 * scaler,
+      height: 34 * scaler,
       borderTopLeftRadius: 20 * scaler,
       borderBottomLeftRadius: 20 * scaler,
       backgroundColor: SELECTED_BG_COLOR,
@@ -129,7 +129,7 @@ export function makeStyles(params) {
 
     endDayWrapper: {
       width: 50 * scaler,
-      height: 30 * scaler,
+      height: 34 * scaler,
       borderTopRightRadius: 20 * scaler,
       borderBottomRightRadius: 20 * scaler,
       backgroundColor: SELECTED_BG_COLOR,
@@ -139,7 +139,7 @@ export function makeStyles(params) {
 
     inRangeDay: {
       width: 50 * scaler,
-      height: 30 * scaler,
+      height: 34 * scaler,
       backgroundColor: SELECTED_BG_COLOR,
       alignSelf: "center",
       justifyContent: "center",
